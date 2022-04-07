@@ -1,4 +1,5 @@
 import View from './view';
+
 import icons from 'url:../../img/icons.svg';
 import { Fraction } from 'fractional';
 
@@ -14,6 +15,7 @@ class recipeView extends View {
   }
 
   addHandlerUpdateServings(handler) {
+    console.log(Fraction);
     this._parentEl.addEventListener('click', function (e) {
       const btn = e.target.closest('.btn--increase-servings');
       if (!btn) return;

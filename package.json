@@ -10,7 +10,6 @@
   "license": "ISC",
   "dependencies": {
     "fractional": "^1.0.0",
-    "fractions": "^1.0.2",
     "parcel": "^2.3.2",
     "scss": "^0.2.4"
   },
