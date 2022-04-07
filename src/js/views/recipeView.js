@@ -1,7 +1,6 @@
 import View from './view';
 
 import icons from 'url:../../img/icons.svg';
-var Fraction = require('fractional').Fraction;
 
 class recipeView extends View {
   _parentEl = document.querySelector('.recipe');
@@ -13,7 +12,6 @@ class recipeView extends View {
   }
 
   addHandlerUpdateServings(handler) {
-    console.log(Fraction);
     this._parentEl.addEventListener('click', function (e) {
       const btn = e.target.closest('.btn--increase-servings');
       if (!btn) return;
@@ -102,9 +100,7 @@ class recipeView extends View {
               <svg class="recipe__icon">
                 <use href="${icons}#icon-check"></use>
               </svg>
-              <div class="recipe__quantity">${
-                ing.quantity ? new Fraction(ing.quantity).toString() : ''
-              }</div>
+              <div class="recipe__quantity">${ing.quantity}</div>
               <div class="recipe__description">
                 <span class="recipe__unit">${ing.unit}</span>
                 ${ing.description}
